@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - NumBar</title>
+    <!-- Modern Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #3b82f6;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 3rem 1rem;
+        }
+
+        /* Animated Background Gradients */
+        .bg-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(15,23,42,0) 70%);
+            top: -100px;
+            left: -200px;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 8s infinite alternate;
+        }
+
+        .bg-glow-2 {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, rgba(15,23,42,0) 70%);
+            bottom: -100px;
+            right: -100px;
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 10s infinite alternate-reverse;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+        
+        .back-link:hover { transform: translateX(-5px); }
+
+        .glass-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            animation: slideUp 0.6s ease-out forwards;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .date {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            margin: 2.5rem 0 1rem 0;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        p, li {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+        li { margin-bottom: 0.5rem; }
+        strong { color: #e2e8f0; font-weight: 600; }
+        code { background: rgba(255,255,255,0.1); padding: 0.2rem 0.4rem; border-radius: 4px; font-size: 0.9em; color: #cbd5e1; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+    <div class="bg-glow-2"></div>
+
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        
+        <div class="glass-card">
+            <h1>Privacy Policy for NumBar</h1>
+            <span class="date">Last Updated: July 2026</span>
+
+            <h2>1. Introduction</h2>
+            <p>This Privacy Policy explains how NumBar ("we", "our", or "the App") collects, uses, and protects your information. NumBar is a macOS status bar application that allows you to view real-time Google Analytics active user metrics.</p>
+
+            <h2>2. Data Collection and Usage</h2>
+            <p>NumBar connects to the Google Analytics Data API to display your metrics. <strong>The App operates entirely locally on your Mac.</strong></p>
+            <ul>
+                <li><strong>No Third-Party Servers:</strong> Your data is never transmitted to, stored on, or processed by any servers owned by NumBar or other third parties.</li>
+                <li><strong>Direct Connection:</strong> All API requests are made directly from your Mac to Google's servers.</li>
+                <li><strong>Read-Only Access:</strong> We request the minimum required permissions (<code>https://www.googleapis.com/auth/analytics.readonly</code>) to fetch your analytics metrics. We cannot and do not modify your Google Analytics data.</li>
+            </ul>
+
+            <h2>3. How We Handle Your Credentials</h2>
+            <p>When you authenticate with Google, OAuth 2.0 access tokens and refresh tokens are securely saved in your Apple macOS Keychain. They never leave your device.</p>
+
+            <h2>4. Google User Data</h2>
+            <p>NumBar's use and transfer of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+            <h2>5. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We encourage you to review this page periodically for any changes.</p>
+
+            <h2>6. Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at support@glvnapps.com.</p>
+        </div>
+
+        <footer>
+            &copy; 2026 NumBar App. Designed for macOS.
+        </footer>
+    </div>
+</body>
+</html>
